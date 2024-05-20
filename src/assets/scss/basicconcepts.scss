@@ -1,0 +1,108 @@
+.GM {
+    &__ModeLight {
+        &__main {
+            &-conceptos-basicos {
+                padding: 40px 0;
+
+                &-titulo {
+                    text-align: center;
+                    font-size: 32px;
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                }
+
+                &-contenido {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    &-video {
+                        flex-basis: 100%;
+                        margin-bottom: 40px;
+
+                        & iframe {
+                            width: 100%;
+                            max-height: 400px;
+                        }
+                    }
+
+                    &-tarjetas {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 20px;
+
+                        &-tarjeta {
+                            flex-basis: calc(33.33% - 20px);
+                            background-color: #fff;
+                            border-radius: 8px;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            overflow: hidden;
+                            width: 300px;
+                            height: 600px;
+                            display: flex;
+                            flex-direction: column;
+
+                            @media screen and (max-width: 1200px) {
+                                flex-basis: calc(50% - 20px);
+                            }
+
+                            @media screen and (max-width: 768px) {
+                                flex-basis: 100%;
+                            }
+
+                            &-imagen {
+                                height: 200px;
+                                overflow: hidden;
+
+                                & img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            &-contenido {
+                                padding: 20px;
+                                flex-grow: 1;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+
+                            &-titulo {
+                                font-size: 24px;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                                text-align: center;
+                            }
+
+                            &-descripcion {
+                                font-size: 16px;
+                                line-height: 1.5;
+                                margin-bottom: 20px;
+                                text-align: center;
+                            }
+
+                            &-enlace {
+                                display: inline-block;
+                                padding: 10px 20px;
+                                background-color: #007bff;
+                                color: #fff;
+                                text-decoration: none;
+                                border-radius: 4px;
+                                transition: background-color 0.3s ease;
+                                align-self: center;
+
+                                &:hover {
+                                    background-color: #0056b3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

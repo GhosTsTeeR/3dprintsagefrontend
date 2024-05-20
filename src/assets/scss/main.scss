@@ -1,0 +1,359 @@
+ 
+.GM {
+  &__ModeLight {
+    &__main {
+      padding: 10px;
+      &-profile {
+        width: 100%;
+        height: 100%;
+        &-panelU {
+          height: 300px;
+          display: flex;
+          border-radius: 5px;
+          align-items: center;
+          position: relative;
+          width: 100%;
+
+          & img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 100%;
+            object-fit: cover;
+            padding: 10px;
+            border-radius: 20px 20px 0 0;
+            display: block;
+          }
+
+          &-data {
+            z-index: 3;
+            margin-left: 210px;
+            margin-top: 10px;
+
+            & img {
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              position: absolute;
+              top: 100px;
+              left: 150px;
+            }
+            & h1 {
+              border-radius: 5px;
+              color: #000000;
+              background: rgba(255, 255, 255, 0.16);
+            }
+            & span {
+              font-size: 16px;
+              border-radius: 5px;
+              color: #000000;
+              background: rgba(255, 255, 255, 0.16);
+            }
+          }
+          &-setting {
+            position: absolute;
+            border-radius: 5px;
+            color: #000000;
+            background: rgba(255, 255, 255, 0.16);
+            z-index: 3;
+            right: 100px;
+            margin-top: 250px;
+          }
+        }
+        &-panelH {
+          margin-top: 20px;
+          display: flex;
+          gap: 20px;
+          background: white;
+          border: 1px solid #ccc;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          &-curses {
+            max-width: 500px;
+            flex: 1;
+            & h1 {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
+            & ul {
+              background: white;
+              list-style: none;
+              & li {
+                background: white;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                & span {
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+          &-settings {
+            flex: 1;
+            & h1 {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
+            &-data {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              & input {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                padding: 5px;
+              }
+            }
+            &-option {
+              display: flex;
+              gap: 10px;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+      &-printers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+        justify-items: center;
+        padding: 10px;
+
+      }
+      &-verI {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        &-btn {
+        }
+      }
+      &-curses {
+        padding: 10px;
+        width: 100%;
+        min-height: 400px;
+        background: white;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 10px;
+        justify-items: center;
+        &-cardcon {
+          display: flex;
+          flex-direction: row;
+          padding: 10px;
+          width: 100%;
+          justify-content: center;
+            
+        }
+        &-login {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            min-width: 250px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            & img {
+              width: 100%;
+              height: 90%;
+              object-fit: cover;
+              border-radius: 10px;
+              margin-bottom: 10px;
+            }
+            &-title {
+              text-align: center;
+              align-items: center;
+              font-size: 18px;
+              font-weight: bold;
+              color: #333;
+            }
+          }
+        }
+      }
+      &-verC {
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        justify-content: flex-end;
+        &-btn {
+        }
+      }
+      &-createcurse {
+        height: 85%;
+        &-header {
+          & ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            padding: 0 10px;
+          }
+        }
+        &-content {
+          margin: 10px;
+          background: #e9e9e9;
+          height: 100%;
+        }
+        &-activity {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          &-container {
+            flex-grow: 1;
+            padding: 20px;
+            &-vacio {
+              width: 100%;
+              height: 100%;
+              text-align: center;
+
+            }
+          }
+          &-footer {
+            height: 100px;
+            background-color: #eccccc;
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            Button {
+              width: 336px;
+              height: 73px;
+            }
+          }
+        }
+      }
+      &-create-print {
+        &-row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+      
+          &-image-container {
+            width: 40%;
+            display: flex;
+            align-items: center;
+      
+            img {
+              width: 90%;
+              height: auto;
+            }
+          }
+      
+          &-info-container {
+            width: 60%;
+            display: flex;
+            align-items: center;
+      
+            h1 {
+              font-size: 28px;
+              margin-bottom: 10px;
+            }
+      
+            p {
+              font-size: 18px;
+            }
+          }
+      
+          &-description {
+            width: 35%;
+      
+            h2 {
+              font-size: 15px;
+              margin-bottom: 10px;
+            }
+      
+            p, ul {
+              font-size: 16px;
+              line-height: 1.5;
+            }
+      
+            ul {
+              list-style-type: disc;
+              margin-left: 5px;
+            }
+          }
+      
+          &-specs {
+            width: 25%;
+      
+            h2 {
+              font-size: 15px;
+              margin-bottom: 10px;
+            }
+      
+            p, ul {
+              font-size: 16px;
+              line-height: 1.5;
+            }
+      
+            ul {
+              list-style-type: disc;
+              margin-left: 5px;
+            }
+          }
+      
+          &-buy-links {
+            h2 {
+              font-size: 15px;
+              margin-bottom: 10px;
+            }
+      
+            p, ul {
+              font-size: 16px;
+              line-height: 1.5;
+            }
+      
+            ul {
+              list-style-type: disc;
+              margin-left: 20px;
+            }
+          }
+        }
+      
+        &-gallery {
+          h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+      
+          &-images {
+            display: flex;
+            justify-content: space-between;
+      
+            &-item {
+              width: 23%;
+              transition: transform 0.3s ease;
+      
+              &:hover {
+                transform: scale(1.1);
+              }
+      
+              img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
